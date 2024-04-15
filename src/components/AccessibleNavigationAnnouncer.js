@@ -16,7 +16,7 @@ function AccessibleNavigationAnnouncer() {
       setMessage('')
     }
     return () => {
-     Clear the timeout when the component unmounts
+     // Clear the timeout when the component unmounts
       clearTimeout(timeoutId);
      };
   }, [location])
