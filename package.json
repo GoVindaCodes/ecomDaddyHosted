@@ -91,7 +91,9 @@
     "cz": "git-cz",
     "release": "release-it",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "render-start": "npm run start",
+    "render-build": "npm run build"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
