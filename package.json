@@ -85,15 +85,13 @@
     "tailwind:build": "cross-env NODE_ENV=production postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
     "prestart": "npm run tailwind:dev",
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' react-scripts --openssl-legacy-provider build",
     "prebuild": "npm run tailwind:build",
     "analyze": "webpack-bundle-analyzer build/bundle-stats.json",
     "cz": "git-cz",
     "release": "release-it",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "render-start": "npm run start",
-    "render-build": "npm install && npm run build"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
