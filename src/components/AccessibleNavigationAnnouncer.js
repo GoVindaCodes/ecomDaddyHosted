@@ -8,17 +8,17 @@ function AccessibleNavigationAnnouncer() {
   useEffect(() => {
     // ignore the /
     //added cleanups so that when the component unmounts does not cause memory leaks (it was this time in console) or any other unexpected behaviour
-    // let timeoutId;
+     let timeoutId;
     if (location.pathname.slice(1)) {
       // make sure navigation has occurred and screen reader is ready
       setTimeout(() => setMessage(`Navigated to ${location.pathname.slice(1)} page.`), 500)
     } else {
       setMessage('')
     }
-    // return () => {
-    //   // Clear the timeout when the component unmounts
-    //   clearTimeout(timeoutId);
-    // };
+    return () => {
+     Clear the timeout when the component unmounts
+      clearTimeout(timeoutId);
+     };
   }, [location])
 
   return (
