@@ -93,7 +93,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "render-start": "npm run start",
-    "render-build": "npm run build"
+    "render-build": "npm install && npm run build"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
